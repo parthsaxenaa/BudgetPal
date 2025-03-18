@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetPal - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>BudgetPal Dashboard</h1>
+  </header>
+  <main>
+    <div class="budget-section">
+      <h2>Monthly Budget</h2>
+      <div class="budget-info">
+        <p>Budget Limit: <span id="budget-limit">$0</span></p>
+        <p>Amount Spent: <span id="amount-spent">$0</span></p>
+        <p>Amount Left: <span id="amount-left">$0</span></p>
+      </div>
+      <form id="set-budget-form">
+        <input type="number" id="budget-input" placeholder="Set Monthly Budget" required>
+        <button type="submit">Set Budget</button>
+      </form>
+    </div>
+    <div class="expense-form">
+      <h2>Add Expense</h2>
+      <form id="add-expense-form">
+        <input type="number" id="expense-amount" placeholder="Amount" required>
+        <input type="text" id="expense-category" placeholder="Category" required>
+        <input type="date" id="expense-date" required>
+        <input type="text" id="expense-description" placeholder="Description">
+        <button type="submit">Add Expense</button>
+      </form>
+    </div>
+    <div class="expense-table">
+      <h2>Expenses</h2>
+      <table id="expense-list">
+        <thead>
+          <tr>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Expenses will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+    <div class="analytics">
+      <h2>Spending Analysis</h2>
+      <canvas id="expense-chart"></canvas>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
