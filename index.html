@@ -3,63 +3,284 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BudgetPal - Home</title>
+  <title>BudgetPal - Smart Budget Tracking for College Students</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="/api/placeholder/32/32">
 </head>
-<body>
-  <div class="home-container">
-    <div class="hero-section">
-      <h1 class="app-name animate__animated animate__fadeInDown">BudgetPal</h1>
-      <p class="tagline animate__animated animate__fadeInUp">Your Personal College Budget & Expense Tracker</p>
-      <div class="auth-buttons animate__animated animate__fadeIn">
-        <button id="signin-btn">Sign In</button>
-        <button id="signup-btn">Sign Up</button>
+<body class="light-mode">
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-wallet"></i>
+        <h1>BudgetPal</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html" class="btn-secondary">Login</a></li>
+          <li><a href="signup.html" class="btn-primary">Sign Up</a></li>
+        </ul>
+      </nav>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </div>
+        </label>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
-    <div class="features-section animate__animated animate__fadeInUp">
-      <h2>Why BudgetPal?</h2>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Take Control of Your College Finances</h2>
+        <p>Smart budget tracking designed for students. Plan, save, and achieve your financial goals with ease.</p>
+        <div class="hero-buttons">
+          <a href="dashboard.html" class="btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+          <a href="dashboard.html" class="btn-secondary">Try Demo</a>
+        </div>
+      </div>
+      <div class="hero-image">
+       
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Powerful Features</h2>
+        <p>Everything you need to manage your finances in one place</p>
+      </div>
+      
       <div class="features-grid">
         <div class="feature-card">
-          <span>📊</span>
-          <h3>Track Expenses</h3>
-          <p>Easily add, edit, and delete your expenses.</p>
+          <div class="feature-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3>Visual Analytics</h3>
+          <p>Interactive charts and graphs to visualize your spending patterns and make informed decisions.</p>
         </div>
+        
         <div class="feature-card">
-          <span>📅</span>
-          <h3>Monthly Analysis</h3>
-          <p>Visualize your spending with interactive charts.</p>
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>Smart Alerts</h3>
+          <p>Get notifications when you're close to exceeding your budget or when bills are due.</p>
         </div>
+        
         <div class="feature-card">
-          <span>💰</span>
-          <h3>Budget Limit</h3>
-          <p>Set a monthly budget and track your spending.</p>
+          <div class="feature-icon">
+            <i class="fas fa-piggy-bank"></i>
+          </div>
+          <h3>Savings Goals</h3>
+          <p>Set and track savings goals for tuition, textbooks, or spring break plans.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3>Custom Categories</h3>
+          <p>Create your own expense categories tailored to your college lifestyle.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Recurring Expenses</h3>
+          <p>Track monthly bills and subscriptions automatically.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Secure Data</h3>
+          <p>Your financial information is always protected and private.</p>
         </div>
       </div>
     </div>
-  </div>
-  <div class="auth-modal" id="auth-modal">
-    <div class="auth-form" id="signin-form">
-      <h2>Sign In</h2>
-      <form id="signin-form">
-        <input type="email" id="signin-email" placeholder="Email" required>
-        <input type="password" id="signin-password" placeholder="Password" required>
-        <button type="submit">Sign In</button>
-      </form>
-      <p>Don't have an account? <a href="#" id="toggle-signup">Sign Up</a></p>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <div class="section-header">
+            <h2>About BudgetPal</h2>
+          </div>
+          <p>BudgetPal was created by a team of former college students who experienced firsthand the challenges of managing finances during college years.</p>
+          <p>Our mission is to empower students with the tools they need to develop healthy financial habits early, reduce the stress of money management, and focus on what matters most—their education and experiences.</p>
+          <p>We've designed BudgetPal specifically for the unique financial situations college students face, from irregular income sources to shared expenses and academic term planning.</p>
+          <a href="#" class="btn-secondary">Learn More About Us</a>
+        </div>
+        <div>
+         
+      </div>
     </div>
-    <div class="auth-form" id="signup-form" style="display: none;">
-      <h2>Sign Up</h2>
-      <form id="signup-form">
-        <input type="text" id="signup-name" placeholder="Name" required>
-        <input type="email" id="signup-email" placeholder="Email" required>
-        <input type="password" id="signup-password" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
-      </form>
-      <p>Already have an account? <a href="#" id="toggle-signin">Sign In</a></p>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get in Touch</h2>
+        <p>Have questions or feedback? We'd love to hear from you!</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-form">
+          <form action="mailto:parthsaxena0852@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+        
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>parthsaxena0852@gmail.com</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>8982106965</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>xxx</p>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Managing Your Money Smarter?</h2>
+        <p>Join thousands of students who are taking control of their finances with BudgetPal.</p>
+        <div class="cta-buttons">
+          <a href="dashboard.html" class="btn-primary">Sign Up Now — It's Free!</a>
+          <a href="dashboard.html" class="btn-secondary">Try Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-wallet"></i>
+          <h3>BudgetPal</h3>
+          <p>Your Personal College Budget & Expense Tracker</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="dashboard.html">Demo</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 BudgetPal. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
+  <script>
+    // Dark mode toggle
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.body.classList.replace('light-mode', 'dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.replace('dark-mode', 'light-mode');
+        localStorage.setItem('theme', 'light');
+      }    
+    }
+    
+    toggleSwitch.addEventListener('change', switchTheme);
+    
+    // Check for saved theme preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+      document.body.classList.add(currentTheme === 'dark' ? 'dark-mode' : 'light-mode');
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+    
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
